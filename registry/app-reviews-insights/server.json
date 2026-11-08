@@ -1,0 +1,26 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.ByteBlisk/app-reviews-insights",
+  "title": "App Store & Google Play Reviews Scraper API",
+  "description": "Google Play and App Store reviews in one format, with complaint themes, quotes and app comparison.",
+  "version": "1.0.0",
+  "websiteUrl": "https://apify.com/byteblisk/app-reviews-insights",
+  "repository": {
+    "url": "https://github.com/ByteBlisk/mcp-servers",
+    "source": "github"
+  },
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://mcp.apify.com/?tools=byteblisk/app-reviews-insights",
+      "headers": [
+        {
+          "name": "Authorization",
+          "description": "Bearer token: your Apify API token (console.apify.com/settings/integrations)",
+          "isRequired": true,
+          "isSecret": true
+        }
+      ]
+    }
+  ]
+}

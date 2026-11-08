@@ -1,0 +1,26 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.ByteBlisk/sitereader",
+  "title": "Web Scraper & Crawler for RAG (Markdown)",
+  "description": "Website to clean Markdown or JSON for AI and RAG: read pages, crawl sites, extract described fields.",
+  "version": "1.0.0",
+  "websiteUrl": "https://apify.com/byteblisk/sitereader",
+  "repository": {
+    "url": "https://github.com/ByteBlisk/mcp-servers",
+    "source": "github"
+  },
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://mcp.apify.com/?tools=byteblisk/sitereader",
+      "headers": [
+        {
+          "name": "Authorization",
+          "description": "Bearer token: your Apify API token (console.apify.com/settings/integrations)",
+          "isRequired": true,
+          "isSecret": true
+        }
+      ]
+    }
+  ]
+}

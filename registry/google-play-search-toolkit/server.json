@@ -1,0 +1,26 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.ByteBlisk/google-play-search-toolkit",
+  "title": "Google Play Scraper & SERP Rank Checker",
+  "description": "Google Play apps, reviews and search, plus top-100 search rank on Google, Bing and Yandex.",
+  "version": "1.0.0",
+  "websiteUrl": "https://apify.com/byteblisk/google-play-search-toolkit",
+  "repository": {
+    "url": "https://github.com/ByteBlisk/mcp-servers",
+    "source": "github"
+  },
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://mcp.apify.com/?tools=byteblisk/google-play-search-toolkit",
+      "headers": [
+        {
+          "name": "Authorization",
+          "description": "Bearer token: your Apify API token (console.apify.com/settings/integrations)",
+          "isRequired": true,
+          "isSecret": true
+        }
+      ]
+    }
+  ]
+}

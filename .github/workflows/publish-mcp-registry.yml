@@ -1,0 +1,20 @@
+name: Publish to the MCP Registry
+on: workflow_dispatch
+permissions:
+  id-token: write   # GitHub OIDC proves the ByteBlisk namespace; no stored secrets
+  contents: read
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install mcp-publisher v1.8.8
+        run: curl -sSL "https://github.com/modelcontextprotocol/registry/releases/download/v1.8.8/mcp-publisher_linux_amd64.tar.gz" | tar xz mcp-publisher
+      - name: Sign in with GitHub OIDC
+        run: ./mcp-publisher login github-oidc
+      - name: Publish the three servers
+        run: |
+          for d in registry/*/; do
+            echo "== $d"
+            (cd "$d" && ../../mcp-publisher publish)
+          done
