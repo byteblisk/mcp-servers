@@ -43,6 +43,12 @@ Claude Desktop, Cursor or any MCP client (`mcp.json`):
 Get a token at [console.apify.com/settings/integrations](https://console.apify.com/settings/integrations). Prices
 are on each Store page; Apify's free plan includes monthly credit to try them.
 
+## What is in this repository
+
+The servers run hosted on Apify; their code is not in this repository. Each server's tools, inputs and endpoint are
+described in [`registry/<server>/server.json`](registry). This repository holds the listings, logos and connection
+details, under the [MIT licence](LICENSE).
+
 ## Support
 
 Open an issue on the actor's Store page; we answer every one.
